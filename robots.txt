@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oosaka0123-sudo.github.io/bouhan-lab/sitemap.xml

@@ -1,12 +1,44 @@
-const header=document.querySelector('[data-header]');const menuBtn=document.querySelector('[data-menu-button]');const mobileMenu=document.querySelector('[data-mobile-menu]');const reveals=[...document.querySelectorAll('.reveal')];
+const header=document.querySelector('[data-header]');
+const menuBtn=document.querySelector('[data-menu-button]');
+const mobileMenu=document.querySelector('[data-mobile-menu]');
+const reveals=[...document.querySelectorAll('.reveal')];
 window.addEventListener('scroll',()=>header?.classList.toggle('is-scrolled',window.scrollY>18),{passive:true});
 menuBtn?.addEventListener('click',()=>{const open=menuBtn.getAttribute('aria-expanded')==='true';menuBtn.setAttribute('aria-expanded',String(!open));mobileMenu.hidden=open});
 mobileMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.hidden=true;menuBtn?.setAttribute('aria-expanded','false')}));
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12});reveals.forEach(el=>io.observe(el));
-const shell=document.querySelector('[data-diagnosis]');if(shell){const answers={};const steps=[...shell.querySelectorAll('[data-step]')];const bar=shell.querySelector('[data-progress-bar]');const progress=shell.querySelector('[data-progress]');const result=shell.querySelector('[data-result]');const title=shell.querySelector('[data-result-title]');const copy=shell.querySelector('[data-result-copy]');const tags=shell.querySelector('[data-result-tags]');let current=1;
-const showStep=n=>{steps.forEach(s=>s.classList.toggle('is-active',Number(s.dataset.step)===n));current=n;progress.textContent=`${n} / 3`;bar.style.width=`${n/3*100}%`};
-const render=()=>{steps.forEach(s=>s.classList.remove('is-active'));progress.textContent='完了';bar.style.width='100%';result.hidden=false;const door=answers.risk==='door';const windowRisk=answers.risk==='window';const rental=answers.home==='rental'||answers.work==='no';title.textContent=door?'まずは玄関の侵入対策から':windowRisk?'窓・ベランダの死角対策を優先':'留守中の見守りを優先';copy.textContent=rental?'工事不要・原状回復しやすい対策を中心に選ぶのが現実的です。':'設置自由度を活かし、物理対策と見守り機器を組み合わせると効率的です。';const values=[rental?'工事不要':'設置自由度高',door?'玄関強化':windowRisk?'窓対策':'留守対策',answers.home==='house'?'戸建て':'住居条件対応'];tags.innerHTML=values.map(v=>`<span>${v}</span>`).join('')};
-shell.querySelectorAll('[data-answer]').forEach(btn=>btn.addEventListener('click',()=>{answers[btn.dataset.answer]=btn.dataset.value;if(current<3)showStep(current+1);else render()}));
-shell.querySelector('[data-restart]')?.addEventListener('click',()=>{Object.keys(answers).forEach(k=>delete answers[k]);result.hidden=true;showStep(1)});
-}
-import('./ad-router.js').then(({mountAffiliateSlots})=>mountAffiliateSlots()).catch(()=>{});
+const io=('IntersectionObserver' in window)?new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12}):null;
+if(io){reveals.forEach(el=>io.observe(el))}else{reveals.forEach(el=>el.classList.add('is-visible'))}
+const shell=document.querySelector('[data-diagnosis]');
+if(shell){
+  const answers={};
+  const steps=[...shell.querySelectorAll('[data-step]')];
+  const total=steps.length;
+  const bar=shell.querySelector('[data-progress-bar]');
+  const progress=shell.querySelector('[data-progress]');
+  const result=shell.querySelector('[data-result]');
+  let current=1;
+  const showStep=n=>{steps.forEach(s=>s.classList.toggle('is-active',Number(s.dataset.step)===n));current=n;progress.textContent=`${n} / ${total}`;bar.style.width=`${(n/total)*100}%`};
+  const tierEls={
+    a:{title:shell.querySelector('[data-tier-a-title]'),copy:shell.querySelector('[data-tier-a-copy]'),link:shell.querySelector('[data-tier-a-link]')},
+    b:{title:shell.querySelector('[data-tier-b-title]'),copy:shell.querySelector('[data-tier-b-copy]'),link:shell.querySelector('[data-tier-b-link]')},
+    c:{title:shell.querySelector('[data-tier-c-title]'),copy:shell.querySelector('[data-tier-c-copy]'),link:shell.querySelector('[data-tier-c-link]')}
+  };
+  const setTier=(key,title,copy,href,label)=>{
+    const t=tierEls[key];if(!t||!t.title)return;
+    t.title.textContent=title;t.copy.textContent=copy;t.link.textContent=label;t.link.setAttribute('href',href);
+  };
+  const render=()=>{
+    steps.forEach(s=>s.classList.remove('is-active'));progress.textContent='完了';bar.style.width='100%';result.hidden=false;
+    if(answers.risk==='door'){
+      setTier('a','玄関まわりの対策から確認する','補助錠や鍵の状態など、侵入に時間をかけさせる基本を先に見直します。','burglary-prevention.html#entrance','玄関の対策を見る →');
+    }else if(answers.risk==='window'){
+      setTier('a','窓・ベランダの死角対策を確認する','窓やベランダは死角になりやすく、補助鍵やセンサーとの組み合わせを確認します。','burglary-prevention.html#window','窓・ベランダ対策を見る →');
+    }else{
+      setTier('a','留守中に確認できる仕組みを優先する','外出時間が長い場合は、状況をあとから確認できる方法を優先します。','security-camera-guide.html','見守りカメラの選び方 →');
+    }
+    if(answers.home==='rental'||answers.work==='no'){
+      setTier('b','工事不要の対策を中心に選ぶ','原状回復が必要な住まいでは、置き型・粘着タイプを中心に検討します。','rental-security-camera.html','賃貸向けの防犯カメラ →');
+    }else if(answers.home==='house'){
+      setTier('b','戸建て向けに侵入経路を面で見直す','戸建ては侵入経路が複数あるため、場所ごとに優先順位を付けて対策します。','house-security.html','戸建ての防犯対策 →');
+    }else{
+      setTier('b','専有部と共用部を分けて考える','マンションは共用部の設備と、玄関ドアなど専有部の対策を分けて確認します。','condo-security.html','マンションの防犯対策 →');
+    }

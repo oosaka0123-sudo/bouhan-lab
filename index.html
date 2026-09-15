@@ -4,10 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>防犯ラボ｜住まいに合う防犯対策がわかる</title>
-  <meta name="description" content="賃貸・戸建て・マンション・一人暮らしに合わせて、防犯対策・防犯カメラ・スマートロック・ホームセキュリティを比較できる防犯専門メディア。">
+  <meta name="description" content="賃貸・戸建て・マンション・一人暮らしに合わせて、防犯対策・防犯カメラ・スマートロック・ホームセキュリティを比較できる防犯専門メディア。30秒の防犯診断で優先対策がわかります。">
   <meta name="theme-color" content="#071421">
+  <link rel="canonical" href="https://bouhan-lab.example/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="防犯ラボ">
+  <meta property="og:title" content="防犯ラボ｜住まいに合う防犯対策がわかる">
+  <meta property="og:description" content="賃貸・戸建て・マンション・一人暮らしに合わせて防犯対策を比較できる防犯専門メディア。">
+  <meta property="og:url" content="https://bouhan-lab.example/">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="assets/js/app.js"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"防犯ラボ","alternateName":"BOUHAN LAB","url":"https://bouhan-lab.example/","logo":"https://bouhan-lab.example/assets/img/hero-house.svg"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"防犯ラボ","url":"https://bouhan-lab.example/","inLanguage":"ja"}
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">本文へ移動</a>
@@ -44,51 +58,62 @@
     </section>
 
     <section class="diagnosis section" id="diagnosis">
-      <div class="section-head reveal"><p class="eyebrow">30 SECOND CHECK</p><h2>あなたの家に必要な防犯を絞る</h2><p>3つ答えるだけで、最初に見るべき対策を表示します。</p></div>
+      <div class="section-head reveal"><p class="eyebrow">30 SECOND CHECK</p><h2>あなたの家に必要な防犯を絞る</h2><p>4つ答えるだけで、優先して見るべき対策を3段階で表示します。架空の点数化は行いません。</p></div>
       <div class="diagnosis-shell reveal" data-diagnosis>
-        <div class="progress"><span data-progress>1 / 3</span><i><b data-progress-bar></b></i></div>
+        <div class="progress"><span data-progress>1 / 4</span><i><b data-progress-bar></b></i></div>
         <div class="step is-active" data-step="1"><h3>住まいは？</h3><div class="choice-grid"><button data-answer="home" data-value="rental">賃貸</button><button data-answer="home" data-value="house">戸建て</button><button data-answer="home" data-value="condo">マンション</button></div></div>
         <div class="step" data-step="2"><h3>工事はできますか？</h3><div class="choice-grid"><button data-answer="work" data-value="no">できない</button><button data-answer="work" data-value="small">小規模なら可</button><button data-answer="work" data-value="yes">できる</button></div></div>
         <div class="step" data-step="3"><h3>一番気になる場所は？</h3><div class="choice-grid"><button data-answer="risk" data-value="door">玄関</button><button data-answer="risk" data-value="window">窓・ベランダ</button><button data-answer="risk" data-value="away">留守中</button></div></div>
-        <div class="diagnosis-result" data-result hidden aria-live="polite"><p class="eyebrow">YOUR PRIORITY</p><h3 data-result-title></h3><p data-result-copy></p><div class="result-tags" data-result-tags></div><a class="btn btn-primary" href="#by-home">詳しい対策を見る</a><button class="text-btn" data-restart>やり直す</button></div>
+        <div class="step" data-step="4"><h3>今かけられる予算感は？</h3><div class="choice-grid"><button data-answer="budget" data-value="low">〜5千円程度</button><button data-answer="budget" data-value="mid">5千〜2万円程度</button><button data-answer="budget" data-value="high">2万円以上</button></div></div>
+        <div class="diagnosis-result" data-result hidden aria-live="polite">
+          <p class="eyebrow">YOUR PRIORITY</p>
+          <h3>優先して見るべき3つの対策</h3>
+          <p>点数や診断スコアではなく、回答の組み合わせから優先順位を3段階で整理しています。</p>
+          <div class="priority-tiers">
+            <div class="tier tier-a"><span>優先度A・今すぐ</span><b data-tier-a-title></b><p data-tier-a-copy></p><a data-tier-a-link href="#"></a></div>
+            <div class="tier tier-b"><span>優先度B・次に</span><b data-tier-b-title></b><p data-tier-b-copy></p><a data-tier-b-link href="#"></a></div>
+            <div class="tier tier-c"><span>優先度C・余裕があれば</span><b data-tier-c-title></b><p data-tier-c-copy></p><a data-tier-c-link href="#"></a></div>
+          </div>
+          <button class="text-btn" data-restart>やり直す</button>
+        </div>
       </div>
     </section>
 
     <section class="section soft" id="by-home">
       <div class="section-head reveal"><p class="eyebrow">START FROM YOUR HOME</p><h2>住まいから探す</h2></div>
       <div class="card-grid four">
-        <a class="topic-card reveal" href="#"><span>01</span><h3>一人暮らし</h3><p>玄関・ベランダ・留守時間から優先順位を整理。</p><b>見る →</b></a>
-        <a class="topic-card reveal" href="#"><span>02</span><h3>賃貸</h3><p>穴あけ不可・原状回復を前提に工事不要対策を選ぶ。</p><b>見る →</b></a>
-        <a class="topic-card reveal" href="#"><span>03</span><h3>戸建て</h3><p>侵入経路が多い住宅を面で守る考え方。</p><b>見る →</b></a>
-        <a class="topic-card reveal" href="#"><span>04</span><h3>マンション</h3><p>共用部と専有部を分けて考える実践型防犯。</p><b>見る →</b></a>
+        <a class="topic-card reveal" href="living-alone.html"><span>01</span><h3>一人暮らし</h3><p>玄関・ベランダ・留守時間から優先順位を整理。</p><b>見る →</b></a>
+        <a class="topic-card reveal" href="rental-security-camera.html"><span>02</span><h3>賃貸</h3><p>穴あけ不可・原状回復を前提に工事不要対策を選ぶ。</p><b>見る →</b></a>
+        <a class="topic-card reveal" href="house-security.html"><span>03</span><h3>戸建て</h3><p>侵入経路が多い住宅を面で守る考え方。</p><b>見る →</b></a>
+        <a class="topic-card reveal" href="condo-security.html"><span>04</span><h3>マンション</h3><p>共用部と専有部を分けて考える実践型防犯。</p><b>見る →</b></a>
       </div>
     </section>
 
     <section class="section" id="devices">
       <div class="section-head split reveal"><div><p class="eyebrow">TOOLS & DEVICES</p><h2>機器は「性能」より<br>住まい条件で選ぶ</h2></div><p>高い商品を選ぶのではなく、設置できるか・続けられるか・目的に合うかで比較します。</p></div>
       <div class="feature-grid">
-        <article class="feature-card reveal"><div class="icon">CAM</div><h3>防犯カメラ</h3><p>画角・暗視・録画方式・工事可否から選ぶ。</p><a href="#">選び方を見る</a></article>
-        <article class="feature-card reveal"><div class="icon">LOCK</div><h3>スマートロック</h3><p>賃貸可否・電池・締め出し対策まで確認。</p><a href="#">比較を見る</a></article>
-        <article class="feature-card reveal"><div class="icon">LAMP</div><h3>センサーライト</h3><p>明るさより設置位置と死角を重視。</p><a href="#">選び方を見る</a></article>
+        <article class="feature-card reveal"><div class="icon">CAM</div><h3>防犯カメラ</h3><p>画角・暗視・録画方式・工事可否から選ぶ。</p><a href="security-camera-guide.html">選び方を見る →</a></article>
+        <article class="feature-card reveal"><div class="icon">LOCK</div><h3>スマートロック</h3><p>賃貸可否・電池・締め出し対策まで確認。</p><a href="smart-lock-rental.html">比較を見る →</a></article>
+        <article class="feature-card reveal"><div class="icon">LAMP</div><h3>センサーライト</h3><p>明るさより設置位置と死角を重視。</p><a href="burglary-prevention.html#sensor-light">選び方を見る →</a></article>
       </div>
     </section>
 
     <section class="section dark" id="security">
-      <div class="security-panel reveal"><div><p class="eyebrow">HOME SECURITY</p><h2>ホームセキュリティは<br>料金だけで決めない。</h2><p>契約期間、工事、解約条件、駆けつけ範囲まで比較して、自分の生活に合うか判断します。</p></div><div class="compare-mini"><div><span>比較軸</span><b>月額 / 工事 / 契約期間</b></div><div><span>重視</span><b>条件の透明性</b></div><div><span>主な記事</span><b>ALSOK / SECOM / 賃貸</b></div><a class="btn btn-light" href="#">比較を見る</a></div></div>
+      <div class="security-panel reveal"><div><p class="eyebrow">HOME SECURITY</p><h2>ホームセキュリティは<br>料金だけで決めない。</h2><p>契約期間、工事、解約条件、駆けつけ範囲まで比較して、自分の生活に合うか判断します。</p></div><div class="compare-mini"><div><span>比較軸</span><b>月額 / 工事 / 契約期間</b></div><div><span>重視</span><b>条件の透明性</b></div><div><span>関連記事</span><b><a href="secom-vs-alsok.html" style="color:inherit">SECOMとALSOKの比較</a></b></div><a class="btn btn-light" href="home-security-compare.html">比較を見る</a></div></div>
     </section>
 
     <section class="section" id="guide">
       <div class="section-head reveal"><p class="eyebrow">KNOWLEDGE BASE</p><h2>防犯の基礎知識</h2></div>
       <div class="article-list">
-        <a class="article-row reveal" href="#"><span>GUIDE</span><div><h3>防犯対策の基本原則</h3><p>「完全に防ぐ」ではなく、侵入に時間をかけさせる考え方。</p></div><b>→</b></a>
-        <a class="article-row reveal" href="#"><span>LAW</span><div><h3>防犯カメラとプライバシー</h3><p>撮影範囲・設置時に確認したい基本事項。</p></div><b>→</b></a>
-        <a class="article-row reveal" href="#"><span>LOCAL</span><div><h3>自治体の防犯補助金</h3><p>一次情報を確認できた制度だけを整理。</p></div><b>→</b></a>
+        <a class="article-row reveal" href="burglary-prevention.html"><span>GUIDE</span><div><h3>防犯対策の基本原則</h3><p>「完全に防ぐ」ではなく、侵入に時間をかけさせる考え方。</p></div><b>→</b></a>
+        <a class="article-row reveal" href="camera-privacy-law.html"><span>LAW</span><div><h3>防犯カメラとプライバシー</h3><p>撮影範囲・設置時に確認したい基本事項。</p></div><b>→</b></a>
+        <a class="article-row reveal" href="security-subsidy.html"><span>LOCAL</span><div><h3>自治体の防犯補助金</h3><p>一次情報を確認できた制度だけを整理。</p></div><b>→</b></a>
       </div>
     </section>
 
-    <section class="editorial-policy section soft reveal"><div><p class="eyebrow">EDITORIAL POLICY</p><h2>確認できたことだけ、数字で書く。</h2><p>防犯ラボは、二次情報の数字をそのまま断定しません。料金・制度・仕様は一次情報を優先し、確認できない場合は「未確認」と明記します。</p></div><a href="#">編集方針を見る →</a></section>
+    <section class="editorial-policy section soft reveal"><div><p class="eyebrow">EDITORIAL POLICY</p><h2>確認できたことだけ、数字で書く。</h2><p>防犯ラボは、二次情報の数字をそのまま断定しません。料金・制度・仕様は一次情報を優先し、確認できない場合は「未確認」と明記します。</p></div><a href="editorial-policy.html">編集方針を見る →</a></section>
   </main>
 
-  <footer class="site-footer"><div><div class="brand footer-brand"><span class="brand-mark">B</span><span><b>防犯ラボ</b><small>BOUHAN LAB</small></span></div><p>自分の住まいに、本当に必要な防犯対策がわかる。</p></div><nav><a href="#">運営者情報</a><a href="#">編集方針</a><a href="#">広告・アフィリエイト</a><a href="#">プライバシーポリシー</a><a href="#">お問い合わせ</a></nav><small>© 2026 BOUHAN LAB</small></footer>
+  <footer class="site-footer"><div><div class="brand footer-brand"><span class="brand-mark">B</span><span><b>防犯ラボ</b><small>BOUHAN LAB</small></span></div><p>自分の住まいに、本当に必要な防犯対策がわかる。</p></div><nav><a href="about.html">運営者情報</a><a href="editorial-policy.html">編集方針</a><a href="advertising.html">広告・アフィリエイト</a><a href="privacy.html">プライバシーポリシー</a><a href="contact.html">お問い合わせ</a></nav><small>© 2026 BOUHAN LAB</small></footer>
 </body>
 </html>

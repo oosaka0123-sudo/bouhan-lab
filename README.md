@@ -26,3 +26,17 @@
 ## Status
 
 Repository initialized for site development.
+
+## 現在の実装
+- TOP + 4問30秒防犯診断
+- 住まい別・防犯機器・ホームセキュリティ・基礎知識の主要記事
+- 運営者情報・編集方針・広告表記・プライバシー・お問い合わせ
+- robots.txt / sitemap.xml / 404 / canonical / OGP / Article JSON-LD
+- 情報記事のみAdSenseプレースホルダ、比較記事はアフィリエイト導線優先
+
+## 公開前チェック
+- AdSense審査後に実広告コードを設定
+- ASP提携後にdata-affiliate-placeholderを公式リンクへ置換
+- お問い合わせ送信先を設定
+- 独自ドメイン採用時はcanonical / sitemap / robotsのBASEを一括変更
+- 実機レビューは実測データ取得後のみ公開
