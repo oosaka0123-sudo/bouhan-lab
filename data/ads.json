@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-16",
+  "ads": [
+    {
+      "id": "vc-secom-home",
+      "network": "valuecommerce",
+      "type": "lead",
+      "category": ["home-security", "house", "away"],
+      "approved": false,
+      "active": false,
+      "priority": 100,
+      "label": "セコム・ホームセキュリティ",
+      "url": ""
+    },
+    {
+      "id": "vc-alsok-home",
+      "network": "valuecommerce",
+      "type": "lead",
+      "category": ["home-security", "house", "away"],
+      "approved": false,
+      "active": false,
+      "priority": 95,
+      "label": "ALSOKホームセキュリティ",
+      "url": ""
+    },
+    {
+      "id": "rakuten-security-camera",
+      "network": "rakuten",
+      "type": "product-api",
+      "category": ["camera", "rental", "house", "outdoor"],
+      "approved": false,
+      "active": false,
+      "priority": 80,
+      "label": "防犯カメラ商品候補",
+      "url": ""
+    },
+    {
+      "id": "amazon-smart-lock",
+      "network": "amazon",
+      "type": "product-api",
+      "category": ["smart-lock", "door", "rental"],
+      "approved": false,
+      "active": false,
+      "priority": 75,
+      "label": "スマートロック商品候補",
+      "url": ""
+    }
+  ]
+}
