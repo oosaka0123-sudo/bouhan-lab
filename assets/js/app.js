@@ -9,3 +9,4 @@ const render=()=>{steps.forEach(s=>s.classList.remove('is-active'));progress.tex
 shell.querySelectorAll('[data-answer]').forEach(btn=>btn.addEventListener('click',()=>{answers[btn.dataset.answer]=btn.dataset.value;if(current<3)showStep(current+1);else render()}));
 shell.querySelector('[data-restart]')?.addEventListener('click',()=>{Object.keys(answers).forEach(k=>delete answers[k]);result.hidden=true;showStep(1)});
 }
+import('./ad-router.js').then(({mountAffiliateSlots})=>mountAffiliateSlots()).catch(()=>{});
