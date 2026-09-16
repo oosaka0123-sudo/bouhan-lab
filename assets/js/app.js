@@ -112,3 +112,69 @@ import('./ad-router.js?v=20260916-1955').then(m=>m.mountAffiliateSlots()).catch(
 const siteSearch=document.querySelector('[data-site-search]');
 if(siteSearch){const items=[...document.querySelectorAll('[data-search-item]')];siteSearch.addEventListener('input',()=>{const q=siteSearch.value.trim().toLowerCase();items.forEach(a=>{a.hidden=q&&!a.textContent.toLowerCase().includes(q)});document.querySelectorAll('[data-site-map] section').forEach(sec=>{sec.hidden=q&&![...sec.querySelectorAll('[data-search-item]')].some(a=>!a.hidden)})})}
 document.addEventListener('click',e=>{document.querySelectorAll('.mega-nav details[open]').forEach(d=>{if(!d.contains(e.target))d.removeAttribute('open')})});
+
+// Footer network: related sites are injected once; current site and Powered-by target are excluded from the network to avoid duplication.
+(()=>{
+  const footer=document.querySelector('.site-footer');
+  if(!footer||footer.querySelector('.site-network')) return;
+
+  const footerNav=footer.querySelector('nav');
+  if(footerNav){
+    [...footerNav.querySelectorAll('a')].forEach(a=>{
+      const href=a.getAttribute('href')||'';
+      if(href.includes('rss7.net')||href.includes('chat.rss7.net')) a.remove();
+    });
+  }
+
+  const groups=[
+    ['AI・Web制作・開発',[
+      ['RSS7 AI Works','https://rss7.net/'],
+      ['BitFrame','https://bitframe.rss7.net/'],
+      ['Claude Code教室','https://claudecode.rss7.net/'],
+      ['AI Agent','https://oosaka0123-sudo.github.io/ai-agent/']
+    ]],
+    ['サーフィン・スポーツ',[
+      ['関西サーファーKS','https://kansai.rss7.net/'],
+      ['関東サーファーKS','https://kanto.rss7.net/'],
+      ['S.LEAGUE NOW','https://sleague.rss7.net/']
+    ]],
+    ['仏教・思想・スピリチュアル',[
+      ['ブッダの教え','https://oosaka0123-sudo.github.io/buddha-no-oshie/'],
+      ['密教図譜','https://oosaka0123-sudo.github.io/mikkyou-guide/'],
+      ['アカシックレコード','https://oosaka0123-sudo.github.io/akashic-records-jp/']
+    ]],
+    ['暮らし・仕事・実用情報',[
+      ['現場資格ラボ','https://genba.rss7.net/'],
+      ['50PLUS','https://oosaka0123-sudo.github.io/50plus/'],
+      ['50代体力研究所｜VITALITY ATLAS','https://oosaka0123-sudo.github.io/50plus-vitality-jp/']
+    ]],
+    ['映像・人生記録',[
+      ['映像工房 軌跡','https://kiseki.rss7.net/']
+    ]],
+    ['FX・金融',[
+      ['FX Entry Lab','https://oosaka0123-sudo.github.io/fx-entry-lab/']
+    ]]
+  ];
+
+  const network=document.createElement('section');
+  network.className='site-network';
+  network.setAttribute('aria-label','関連サイト');
+  network.innerHTML=
+    '<div class="site-network-head"><span>RSS7 NETWORK</span><strong>関連サイト</strong></div>'+
+    '<div class="site-network-grid">'+
+      groups.map(([title,links])=>
+        '<div class="site-network-group"><h2>'+title+'</h2><div>'+
+        links.map(([name,url])=>
+          '<a href="'+url+'" target="_blank" rel="noopener noreferrer">'+name+'<span aria-hidden="true">↗</span></a>'
+        ).join('')+
+        '</div></div>'
+      ).join('')+
+    '</div>';
+
+  footer.insertBefore(network,footer.firstChild);
+
+  const powered=document.createElement('div');
+  powered.className='footer-powered';
+  powered.innerHTML='Powered by <a href="https://chat.rss7.net/" target="_blank" rel="noopener noreferrer">チャットホームページ</a>';
+  footer.appendChild(powered);
+})();
