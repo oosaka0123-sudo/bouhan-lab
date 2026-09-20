@@ -1,12 +1,16 @@
 {
-  "version": 1,
-  "updatedAt": "2026-09-16",
+  "version": 2,
+  "updatedAt": "2026-09-20",
   "ads": [
     {
       "id": "vc-secom-home",
       "network": "valuecommerce",
       "type": "lead",
-      "category": ["home-security", "house", "away"],
+      "category": [
+        "home-security",
+        "house",
+        "away"
+      ],
       "approved": false,
       "active": false,
       "priority": 100,
@@ -17,7 +21,11 @@
       "id": "vc-alsok-home",
       "network": "valuecommerce",
       "type": "lead",
-      "category": ["home-security", "house", "away"],
+      "category": [
+        "home-security",
+        "house",
+        "away"
+      ],
       "approved": false,
       "active": false,
       "priority": 95,
@@ -27,24 +35,72 @@
     {
       "id": "rakuten-security-camera",
       "network": "rakuten",
-      "type": "product-api",
-      "category": ["camera", "rental", "house", "outdoor"],
-      "approved": false,
-      "active": false,
-      "priority": 80,
-      "label": "防犯カメラ商品候補",
-      "url": ""
+      "type": "official-html",
+      "category": [
+        "camera",
+        "rental",
+        "house",
+        "outdoor",
+        "away"
+      ],
+      "approved": true,
+      "active": true,
+      "priority": 85,
+      "label": "TP-Link Tapo 防犯カメラ（楽天市場）",
+      "url": "",
+      "sourceHtml": "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td><div style=\"border:1px solid #95a5a6;border-radius:.75rem;background-color:#FFFFFF;width:504px;margin:0px;padding:5px;text-align:center;overflow:hidden;\"><table><tr><td style=\"width:240px\"><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6cf4f.f87694bf.57b6cf50.44ae8bcf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftplinkdirect%2F4895252504279%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://hbb.afl.rakuten.co.jp/hgb/57b6cf4f.f87694bf.57b6cf50.44ae8bcf/?me_id=1321020&item_id=10001386&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Ftplinkdirect%2Fcabinet%2F06321509%2Ftapo-c5.jpg%3F_ex%3D240x240&s=240x240&t=picttext\" border=\"0\" style=\"margin:2px\" alt=\"[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]\" title=\"[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]\"></a></td><td style=\"vertical-align:top;width:248px;display: block;\"><p style=\"font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word\"><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6cf4f.f87694bf.57b6cf50.44ae8bcf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftplinkdirect%2F4895252504279%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\">【楽天1位★】防犯カメラ 屋外 ワイヤレス 工事不要 家庭用 360°首振り 最大800万画素 高性能 見守りカメラ セキュリティ パンチルト モーショントラッキング機能 スターライトカラーナイトビジョン AI検知 IP66防水防塵 音声通話TP-Link Tapo</a><br><span >価格：7,700円～（税込、送料無料)</span> <span style=\"color:#BBB\">(2026/9/20時点)</span></p><div style=\"margin:10px;\"><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6cf4f.f87694bf.57b6cf50.44ae8bcf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftplinkdirect%2F4895252504279%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://static.affiliate.rakuten.co.jp/makelink/rl.svg\" style=\"float:left;max-height:27px;width:auto;margin-top:0\" ></a><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6cf4f.f87694bf.57b6cf50.44ae8bcf/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Ftplinkdirect%2F4895252504279%2F%3Fscid%3Daf_pc_bbtn&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ==\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><div style=\"float:right;width:41%;height:27px;background-color:#bf0000;color:#fff!important;font-size:12px;font-weight:500;line-height:27px;margin-left:1px;padding: 0 12px;border-radius:16px;cursor:pointer;text-align:center;\"> 楽天で購入 </div></a></div></td></tr></table></div><br><p style=\"color:#000000;font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word\"></p></td></tr></table>",
+      "source": "rakuten-official-generator"
     },
     {
       "id": "amazon-smart-lock",
       "network": "amazon",
       "type": "product-api",
-      "category": ["smart-lock", "door", "rental"],
+      "category": [
+        "smart-lock",
+        "door",
+        "rental"
+      ],
       "approved": false,
       "active": false,
       "priority": 75,
       "label": "スマートロック商品候補",
       "url": ""
+    },
+    {
+      "id": "rakuten-smart-lock",
+      "network": "rakuten",
+      "type": "official-html",
+      "category": [
+        "smart-lock",
+        "door",
+        "rental",
+        "house"
+      ],
+      "approved": true,
+      "active": true,
+      "priority": 84,
+      "label": "SESAME5 スマートロック（楽天市場）",
+      "url": "",
+      "sourceHtml": "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td><div style=\"border:1px solid #95a5a6;border-radius:.75rem;background-color:#FFFFFF;width:504px;margin:0px;padding:5px;text-align:center;overflow:hidden;\"><table><tr><td style=\"width:240px\"><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6d3fa.6e2f10ff.57b6d3fb.31736dc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcandyhouse%2F10000000%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://hbb.afl.rakuten.co.jp/hgb/57b6d3fa.6e2f10ff.57b6d3fb.31736dc0/?me_id=1416128&item_id=10000000&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fcandyhouse%2Fcabinet%2Fssm5_bk_new_thumb.jpg%3F_ex%3D240x240&s=240x240&t=picttext\" border=\"0\" style=\"margin:2px\" alt=\"[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]\" title=\"[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]\"></a></td><td style=\"vertical-align:top;width:248px;display: block;\"><p style=\"font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word\"><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6d3fa.6e2f10ff.57b6d3fb.31736dc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcandyhouse%2F10000000%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\">【公式ストア】セサミ5 SESAME5 スマートロック lock 玄関 後付け ロック 工事不要 Alexa/Google Assistant/Siri/Apple Watch対応 鍵 後付け セキュリティ スマートキー CANDY HOUSE</a><br><span >価格：6,480円（税込、送料無料)</span> <span style=\"color:#BBB\">(2026/9/20時点)</span></p><div style=\"margin:10px;\"><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6d3fa.6e2f10ff.57b6d3fb.31736dc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcandyhouse%2F10000000%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://static.affiliate.rakuten.co.jp/makelink/rl.svg\" style=\"float:left;max-height:27px;width:auto;margin-top:0\" ></a><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6d3fa.6e2f10ff.57b6d3fb.31736dc0/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcandyhouse%2F10000000%2F%3Fscid%3Daf_pc_bbtn&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ==\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><div style=\"float:right;width:41%;height:27px;background-color:#bf0000;color:#fff!important;font-size:12px;font-weight:500;line-height:27px;margin-left:1px;padding: 0 12px;border-radius:16px;cursor:pointer;text-align:center;\"> 楽天で購入 </div></a></div></td></tr></table></div><br><p style=\"color:#000000;font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word\"></p></td></tr></table>",
+      "source": "rakuten-official-generator"
+    },
+    {
+      "id": "rakuten-sensor-light",
+      "network": "rakuten",
+      "type": "official-html",
+      "category": [
+        "sensor-light",
+        "outdoor",
+        "house",
+        "door"
+      ],
+      "approved": true,
+      "active": true,
+      "priority": 82,
+      "label": "大進 屋外センサーライト（楽天市場）",
+      "url": "",
+      "sourceHtml": "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td><div style=\"border:1px solid #95a5a6;border-radius:.75rem;background-color:#FFFFFF;width:504px;margin:0px;padding:5px;text-align:center;overflow:hidden;\"><table><tr><td style=\"width:240px\"><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6d464.27fa0f94.57b6d465.c6755d03/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomconstore%2F4939736902202%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://hbb.afl.rakuten.co.jp/hgb/57b6d464.27fa0f94.57b6d465.c6755d03/?me_id=1389216&item_id=10000076&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fcomconstore%2Fcabinet%2F07697383%2Fabc.jpg%3F_ex%3D240x240&s=240x240&t=picttext\" border=\"0\" style=\"margin:2px\" alt=\"[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]\" title=\"[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]\"></a></td><td style=\"vertical-align:top;width:248px;display: block;\"><p style=\"font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word\"><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6d464.27fa0f94.57b6d465.c6755d03/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomconstore%2F4939736902202%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\">【楽天ランキング1位】 センサーライト 屋外 led コンセント 式 大進 人感 LED AC 100V 2灯式 電源 防犯 ライト 外灯 人感センサーライト 駐車場 ガレージ 玄関 灯 明るい 広範囲 クランプ式 ネジ止め 家庭用コンセント 明り 昼白色 軒下 物置 調整 白色 強力 防水 規格 防雨</a><br><span >価格：3,500円（税込、送料無料)</span> <span style=\"color:#BBB\">(2026/9/20時点)</span></p><div style=\"margin:10px;\"><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6d464.27fa0f94.57b6d465.c6755d03/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomconstore%2F4939736902202%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><img src=\"https://static.affiliate.rakuten.co.jp/makelink/rl.svg\" style=\"float:left;max-height:27px;width:auto;margin-top:0\" ></a><a href=\"https://hb.afl.rakuten.co.jp/ichiba/57b6d464.27fa0f94.57b6d465.c6755d03/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fcomconstore%2F4939736902202%2F%3Fscid%3Daf_pc_bbtn&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ==\" target=\"_blank\" rel=\"nofollow sponsored noopener\" style=\"word-wrap:break-word;\"><div style=\"float:right;width:41%;height:27px;background-color:#bf0000;color:#fff!important;font-size:12px;font-weight:500;line-height:27px;margin-left:1px;padding: 0 12px;border-radius:16px;cursor:pointer;text-align:center;\"> 楽天で購入 </div></a></div></td></tr></table></div><br><p style=\"color:#000000;font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word\"></p></td></tr></table>",
+      "source": "rakuten-official-generator"
     }
   ]
 }
