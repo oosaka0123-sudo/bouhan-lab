@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-25",
   "ads": [
     {
       "id": "vc-secom-home",
@@ -130,6 +130,82 @@
       "active": false,
       "priority": 82,
       "label": "防犯ブザーを楽天市場で見る",
+      "url": ""
+    },
+    {
+      "id": "vc-yahoo-shopping-camera",
+      "network": "valuecommerce",
+      "type": "mylink",
+      "category": [
+        "camera",
+        "outdoor",
+        "house"
+      ],
+      "approved": false,
+      "active": false,
+      "priority": 80,
+      "label": "防犯カメラをYahoo!ショッピングで見る",
+      "url": ""
+    },
+    {
+      "id": "vc-yahoo-shopping-smart-lock",
+      "network": "valuecommerce",
+      "type": "mylink",
+      "category": [
+        "smart-lock",
+        "door",
+        "rental",
+        "house"
+      ],
+      "approved": false,
+      "active": false,
+      "priority": 79,
+      "label": "スマートロックをYahoo!ショッピングで見る",
+      "url": ""
+    },
+    {
+      "id": "vc-yahoo-shopping-sensor-light",
+      "network": "valuecommerce",
+      "type": "mylink",
+      "category": [
+        "sensor-light",
+        "outdoor",
+        "house",
+        "door"
+      ],
+      "approved": false,
+      "active": false,
+      "priority": 78,
+      "label": "センサーライトをYahoo!ショッピングで見る",
+      "url": ""
+    },
+    {
+      "id": "vc-yahoo-shopping-window-lock",
+      "network": "valuecommerce",
+      "type": "mylink",
+      "category": [
+        "door",
+        "rental"
+      ],
+      "approved": false,
+      "active": false,
+      "priority": 77,
+      "label": "補助錠をYahoo!ショッピングで見る",
+      "url": ""
+    },
+    {
+      "id": "vc-yahoo-shopping-alarm",
+      "network": "valuecommerce",
+      "type": "mylink",
+      "category": [
+        "alarm",
+        "rental",
+        "condo"
+      ],
+      "approved": false,
+      "active": false,
+      "priority": 76,
+      "label": "防犯ブザーをYahoo!ショッピングで見る",
       "url": ""
     }
   ]
