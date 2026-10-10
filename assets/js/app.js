@@ -1,3 +1,32 @@
+// ValueCommerce LinkSwitch: load only on pages that actually contain Yahoo! Shopping links.
+// This keeps non-affiliate pages untouched and adds the required PR disclosure where LinkSwitch is active.
+(()=>{
+  const hasYahooShoppingLink=[...document.querySelectorAll('a[href]')].some(a=>{
+    try{
+      const host=new URL(a.href,location.href).hostname.toLowerCase();
+      return host==='shopping.yahoo.co.jp'||host.endsWith('.shopping.yahoo.co.jp')||host==='yahoo.jp';
+    }catch{return false}
+  });
+  if(!hasYahooShoppingLink) return;
+
+  if(!document.querySelector('[data-affiliate-disclosure]')){
+    const notice=document.createElement('p');
+    notice.setAttribute('data-affiliate-disclosure','');
+    notice.textContent='PR：本ページにはアフィリエイト広告を含みます。';
+    notice.style.cssText='margin:12px auto;padding:8px 16px;max-width:1200px;font-size:12px;line-height:1.6;color:#52606d;';
+    (document.querySelector('main')||document.body).prepend(notice);
+  }
+
+  window.vc_pid='892723734';
+  if(!document.querySelector('script[data-vc-linkswitch]')){
+    const script=document.createElement('script');
+    script.src='https://aml.valuecommerce.com/vcdal.js';
+    script.async=true;
+    script.setAttribute('data-vc-linkswitch','');
+    document.head.appendChild(script);
+  }
+})();
+
 const header=document.querySelector('[data-header]');
 const menuBtn=document.querySelector('[data-menu-button]');
 const mobileMenu=document.querySelector('[data-mobile-menu]');
