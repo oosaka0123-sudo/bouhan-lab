@@ -141,11 +141,11 @@
         "outdoor",
         "house"
       ],
-      "approved": false,
-      "active": false,
+      "approved": true,
+      "active": true,
       "priority": 80,
       "label": "防犯カメラをYahoo!ショッピングで見る",
-      "url": ""
+      "url": "https://shopping.yahoo.co.jp/search?p=%E9%98%B2%E7%8A%AF%E3%82%AB%E3%83%A1%E3%83%A9"
     },
     {
       "id": "vc-yahoo-shopping-smart-lock",
@@ -157,11 +157,11 @@
         "rental",
         "house"
       ],
-      "approved": false,
-      "active": false,
+      "approved": true,
+      "active": true,
       "priority": 79,
       "label": "スマートロックをYahoo!ショッピングで見る",
-      "url": ""
+      "url": "https://shopping.yahoo.co.jp/search?p=%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%AD%E3%83%83%E3%82%AF"
     },
     {
       "id": "vc-yahoo-shopping-sensor-light",
@@ -173,11 +173,11 @@
         "house",
         "door"
       ],
-      "approved": false,
-      "active": false,
+      "approved": true,
+      "active": true,
       "priority": 78,
       "label": "センサーライトをYahoo!ショッピングで見る",
-      "url": ""
+      "url": "https://shopping.yahoo.co.jp/search?p=%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC%E3%83%A9%E3%82%A4%E3%83%88+%E9%98%B2%E7%8A%AF"
     },
     {
       "id": "vc-yahoo-shopping-window-lock",
@@ -187,11 +187,11 @@
         "door",
         "rental"
       ],
-      "approved": false,
-      "active": false,
+      "approved": true,
+      "active": true,
       "priority": 77,
       "label": "補助錠をYahoo!ショッピングで見る",
-      "url": ""
+      "url": "https://shopping.yahoo.co.jp/search?p=%E8%A3%9C%E5%8A%A9%E9%8C%A0+%E9%98%B2%E7%8A%AF"
     },
     {
       "id": "vc-yahoo-shopping-alarm",
@@ -202,11 +202,11 @@
         "rental",
         "condo"
       ],
-      "approved": false,
-      "active": false,
+      "approved": true,
+      "active": true,
       "priority": 76,
       "label": "防犯ブザーをYahoo!ショッピングで見る",
-      "url": ""
+      "url": "https://shopping.yahoo.co.jp/search?p=%E9%98%B2%E7%8A%AF%E3%83%96%E3%82%B6%E3%83%BC"
     }
   ]
 }
