@@ -1,5 +1,5 @@
 let linkSwitchPromise=null;
-async function loadValueCommerceLinkSwitch(){
+export async function loadValueCommerceLinkSwitch(){
   if(linkSwitchPromise)return linkSwitchPromise;
   linkSwitchPromise=(async()=>{
     const res=await fetch('data/valuecommerce.runtime.json',{cache:'no-store'});
