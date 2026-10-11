@@ -20,6 +20,7 @@
 <style>
 .compare-lead{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:28px 0 24px}
 .compare-pick{border:1px solid var(--line);border-radius:20px;padding:22px;background:linear-gradient(180deg,#fff,#f7faff)}
+.compare-pick-img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:14px;margin-bottom:14px}
 .compare-pick strong{display:block;font-size:.72rem;letter-spacing:.08em;color:var(--blue);margin-bottom:8px}
 .compare-pick b{display:block;font-size:1.18rem;margin-bottom:8px}
 .compare-pick p{margin:0;color:var(--muted);font-size:.88rem}
@@ -34,12 +35,14 @@
 .compare-table td,.compare-table th{min-width:168px;vertical-align:top}
 .compare-table .compare-label{min-width:116px}
 .compare-table .focus{font-weight:900;color:#17469f}
+.product-thumb{display:block;width:100%;height:110px;object-fit:contain;background:#fff;border-radius:12px;margin:0 auto 8px}
 .product-name{display:block;font-size:.98rem;line-height:1.45}
 .product-note{display:block;margin-top:6px;font-size:.74rem;color:var(--muted);font-weight:600}
 .compare-extra{display:none}
 .show-extra .compare-extra{display:table-cell}
 .verdict-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0 18px}
 .verdict-card{border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff}
+.verdict-image{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:14px;margin-bottom:14px}
 .verdict-card>span:first-child{display:inline-block;margin-bottom:8px;font-size:.7rem;font-weight:900;color:var(--blue);letter-spacing:.08em}
 .verdict-card h3{margin:0 0 8px;font-size:1.2rem}
 .verdict-card p{margin:0;color:var(--muted);font-size:.88rem}
@@ -88,9 +91,9 @@
 </div>
 
 <div class="compare-lead" aria-label="まず比較する3機種">
-<div class="compare-pick"><strong>高画質・広範囲</strong><b><a href="tapo-c530ws.html">Tapo C530WS</a></b><p>3K 5MP、360°首振り、スターライトカラー夜間撮影。常設で広く見たい人向け。</p></div>
-<div class="compare-pick"><strong>配線不要</strong><b><a href="tapo-c425.html">Tapo C425</a></b><p>バッテリー式。電源配線が難しい場所へ設置したい人向け。</p></div>
-<div class="compare-pick"><strong>シンプル導入</strong><b><a href="kashimura-kj200.html">Kashimura KJ-200</a></b><p>3MP、首振り、IP65。必要な屋外監視機能を分かりやすく揃えたい人向け。</p></div>
+<div class="compare-pick"><a href="tapo-c530ws.html"><img class="compare-pick-img" src="https://static.tp-link.com/upload/image-line/Tapo_C530WS_EU_2.0_overview_01_large_20241113021926v.jpg" alt="Tapo C530WS 公式製品画像" loading="eager" decoding="async" referrerpolicy="no-referrer"></a><strong>高画質・広範囲</strong><b><a href="tapo-c530ws.html">Tapo C530WS</a></b><p>3K 5MP、360°首振り、スターライトカラー夜間撮影。常設で広く見たい人向け。</p></div>
+<div class="compare-pick"><a href="tapo-c425.html"><img class="compare-pick-img" src="https://static.tp-link.com/upload/image-line/Tapo_C425_US_2.0__overview_01_large_20251029045722u.jpg" alt="Tapo C425 公式製品画像" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><strong>配線不要</strong><b><a href="tapo-c425.html">Tapo C425</a></b><p>バッテリー式。電源配線が難しい場所へ設置したい人向け。</p></div>
+<div class="compare-pick"><a href="kashimura-kj200.html"><img class="compare-pick-img" src="https://www.kashimura.com/media/0YzOysp2ypU6kJ8UtARxTIDYjaxnISSMjC35p2Bj.jpg" alt="Kashimura KJ-200 公式製品画像" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><strong>シンプル導入</strong><b><a href="kashimura-kj200.html">Kashimura KJ-200</a></b><p>3MP、首振り、IP65。必要な屋外監視機能を分かりやすく揃えたい人向け。</p></div>
 </div>
 
 <div class="compare-toolbar">
@@ -104,11 +107,11 @@
 <thead>
 <tr>
 <th class="compare-label">比較項目</th>
-<th><span class="product-name"><a href="tapo-c530ws.html">Tapo C530WS</a></span><span class="product-note">高画質・広範囲</span></th>
-<th><span class="product-name"><a href="tapo-c425.html">Tapo C425</a></span><span class="product-note">配線不要</span></th>
-<th><span class="product-name"><a href="kashimura-kj200.html">Kashimura KJ-200</a></span><span class="product-note">シンプル導入</span></th>
-<th class="compare-extra"><span class="product-name"><a href="tapo-c520ws.html">Tapo C520WS</a></span><span class="product-note">2Kバランス型</span></th>
-<th class="compare-extra"><span class="product-name"><a href="tapo-c500.html">Tapo C500</a></span><span class="product-note">ベーシック型</span></th>
+<th><a href="tapo-c530ws.html"><img class="product-thumb" src="https://static.tp-link.com/upload/image-line/Tapo_C530WS_EU_2.0_overview_01_large_20241113021926v.jpg" alt="Tapo C530WS" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span class="product-name"><a href="tapo-c530ws.html">Tapo C530WS</a></span><span class="product-note">高画質・広範囲</span></th>
+<th><a href="tapo-c425.html"><img class="product-thumb" src="https://static.tp-link.com/upload/image-line/Tapo_C425_US_2.0__overview_01_large_20251029045722u.jpg" alt="Tapo C425" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span class="product-name"><a href="tapo-c425.html">Tapo C425</a></span><span class="product-note">配線不要</span></th>
+<th><a href="kashimura-kj200.html"><img class="product-thumb" src="https://www.kashimura.com/media/0YzOysp2ypU6kJ8UtARxTIDYjaxnISSMjC35p2Bj.jpg" alt="Kashimura KJ-200" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span class="product-name"><a href="kashimura-kj200.html">Kashimura KJ-200</a></span><span class="product-note">シンプル導入</span></th>
+<th class="compare-extra"><a href="tapo-c520ws.html"><img class="product-thumb" src="https://static.tp-link.com/upload/image-line/Tapo_C520WS_EU_1.0_overview_01_large_20230619024339j.jpg" alt="Tapo C520WS" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span class="product-name"><a href="tapo-c520ws.html">Tapo C520WS</a></span><span class="product-note">2Kバランス型</span></th>
+<th class="compare-extra"><a href="tapo-c500.html"><img class="product-thumb" src="https://static.tp-link.com/upload/image-line/Tapo_C500_EU_2.0_overview_2406_English_01-1_large_20240620080043f_large_20241114085247t.jpg" alt="Tapo C500" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span class="product-name"><a href="tapo-c500.html">Tapo C500</a></span><span class="product-note">ベーシック型</span></th>
 </tr>
 </thead>
 <tbody>
@@ -125,13 +128,13 @@
 
 <h2>用途別の結論</h2>
 <div class="verdict-grid">
-<div class="verdict-card"><span>高画質・広範囲</span><h3><a href="tapo-c530ws.html">Tapo C530WS</a></h3><p>3K 5MP、IP66、360°首振り、スターライトカラー夜間撮影。屋外を常時広く確認したい場合に比較しやすいモデルです。</p><a class="pending-detail" href="tapo-c530ws.html">詳しく見る →</a></div>
-<div class="verdict-card"><span>配線不要</span><h3><a href="tapo-c425.html">Tapo C425</a></h3><p>バッテリー式が最大の違い。コンセントや電源配線が設置条件のネックになる場合に候補になります。</p><a class="pending-detail" href="tapo-c425.html">詳しく見る →</a></div>
-<div class="verdict-card"><span>シンプル導入</span><h3><a href="kashimura-kj200.html">Kashimura KJ-200</a></h3><p>3MP、IP65、首振り、赤外線暗視など屋外監視の基本を押さえています。</p><a class="pending-detail" href="kashimura-kj200.html">詳しく見る →</a></div>
+<div class="verdict-card"><a href="tapo-c530ws.html"><img class="verdict-image" src="https://static.tp-link.com/upload/image-line/Tapo_C530WS_EU_2.0_overview_01_large_20241113021926v.jpg" alt="Tapo C530WS 公式製品画像" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span>高画質・広範囲</span><h3><a href="tapo-c530ws.html">Tapo C530WS</a></h3><p>3K 5MP、IP66、360°首振り、スターライトカラー夜間撮影。屋外を常時広く確認したい場合に比較しやすいモデルです。</p><a class="pending-detail" href="tapo-c530ws.html">詳しく見る →</a></div>
+<div class="verdict-card"><a href="tapo-c425.html"><img class="verdict-image" src="https://static.tp-link.com/upload/image-line/Tapo_C425_US_2.0__overview_01_large_20251029045722u.jpg" alt="Tapo C425 公式製品画像" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span>配線不要</span><h3><a href="tapo-c425.html">Tapo C425</a></h3><p>バッテリー式が最大の違い。コンセントや電源配線が設置条件のネックになる場合に候補になります。</p><a class="pending-detail" href="tapo-c425.html">詳しく見る →</a></div>
+<div class="verdict-card"><a href="kashimura-kj200.html"><img class="verdict-image" src="https://www.kashimura.com/media/0YzOysp2ypU6kJ8UtARxTIDYjaxnISSMjC35p2Bj.jpg" alt="Kashimura KJ-200 公式製品画像" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span>シンプル導入</span><h3><a href="kashimura-kj200.html">Kashimura KJ-200</a></h3><p>3MP、IP65、首振り、赤外線暗視など屋外監視の基本を押さえています。</p><a class="pending-detail" href="kashimura-kj200.html">詳しく見る →</a></div>
 </div>
 <div class="verdict-grid verdict-extra">
-<div class="verdict-card"><span>2Kバランス型</span><h3><a href="tapo-c520ws.html">Tapo C520WS</a></h3><p>2K QHD、IP66、360°首振り、有線LANにも対応。C530WSほどの解像度が不要なら比較候補になります。</p><a class="pending-detail" href="tapo-c520ws.html">詳しく見る →</a></div>
-<div class="verdict-card"><span>ベーシック型</span><h3><a href="tapo-c500.html">Tapo C500</a></h3><p>1080p、IP65、360°首振り、赤外線暗視。高解像度より基本機能を優先するときの比較候補です。</p><a class="pending-detail" href="tapo-c500.html">詳しく見る →</a></div>
+<div class="verdict-card"><a href="tapo-c520ws.html"><img class="verdict-image" src="https://static.tp-link.com/upload/image-line/Tapo_C520WS_EU_1.0_overview_01_large_20230619024339j.jpg" alt="Tapo C520WS 公式製品画像" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span>2Kバランス型</span><h3><a href="tapo-c520ws.html">Tapo C520WS</a></h3><p>2K QHD、IP66、360°首振り、有線LANにも対応。C530WSほどの解像度が不要なら比較候補になります。</p><a class="pending-detail" href="tapo-c520ws.html">詳しく見る →</a></div>
+<div class="verdict-card"><a href="tapo-c500.html"><img class="verdict-image" src="https://static.tp-link.com/upload/image-line/Tapo_C500_EU_2.0_overview_2406_English_01-1_large_20240620080043f_large_20241114085247t.jpg" alt="Tapo C500 公式製品画像" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><span>ベーシック型</span><h3><a href="tapo-c500.html">Tapo C500</a></h3><p>1080p、IP65、360°首振り、赤外線暗視。高解像度より基本機能を優先するときの比較候補です。</p><a class="pending-detail" href="tapo-c500.html">詳しく見る →</a></div>
 </div>
 
 <h2>選ぶ順番は3つだけ</h2>
