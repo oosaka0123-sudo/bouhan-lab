@@ -107,7 +107,19 @@ if(shell){
   });
 }
 
-import('./ad-router.js?v=20260921-2').then(m=>m.mountAffiliateSlots()).catch(e=>console.warn('[affiliate] init failed',e));
+import('./ad-router.js?v=20261011-product').then(async m=>{
+  m.mountAffiliateSlots();
+  if(document.querySelector('[data-linkswitch-page]')){
+    const ok=await m.loadValueCommerceLinkSwitch();
+    if(!ok){
+      console.warn('[affiliate] LinkSwitch runtime unavailable on product page');
+      document.querySelectorAll('[data-linkswitch-cta]').forEach(el=>el.hidden=true);
+    }
+  }
+}).catch(e=>{
+  console.warn('[affiliate] init failed',e);
+  document.querySelectorAll('[data-linkswitch-cta]').forEach(el=>el.hidden=true);
+});
 
 const siteSearch=document.querySelector('[data-site-search]');
 if(siteSearch){const items=[...document.querySelectorAll('[data-search-item]')];siteSearch.addEventListener('input',()=>{const q=siteSearch.value.trim().toLowerCase();items.forEach(a=>{a.hidden=q&&!a.textContent.toLowerCase().includes(q)});document.querySelectorAll('[data-site-map] section').forEach(sec=>{sec.hidden=q&&![...sec.querySelectorAll('[data-search-item]')].some(a=>!a.hidden)})})}
