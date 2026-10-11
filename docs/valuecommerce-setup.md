@@ -20,3 +20,11 @@ Real contract IDs, site IDs, API keys, tokens and raw affiliate tags must not be
 ## Initial candidates
 - Home security lead programs such as SECOM/ALSOK: keep disabled until partnership approval is confirmed in the dashboard.
 - Product-oriented programs: use official product/API feeds where available instead of scraping dashboard pages.
+
+
+## LinkSwitch runtime deployment
+- Keep the real LinkSwitch PID/tag out of this public repository.
+- Production deployment may generate `data/valuecommerce.runtime.json` from a GitHub Actions Secret.
+- Yahoo! Shopping entries should use `type: "linkswitch"` with ordinary Yahoo! Shopping destination URLs.
+- The router loads LinkSwitch only when an approved + active ValueCommerce LinkSwitch ad is actually rendered.
+- If runtime configuration is unavailable, the affected LinkSwitch slot is hidden instead of showing an untracked affiliate CTA.

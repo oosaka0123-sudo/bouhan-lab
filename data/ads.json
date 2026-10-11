@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-25",
+  "updatedAt": "2026-10-11",
   "ads": [
     {
       "id": "vc-secom-home",
@@ -135,7 +135,7 @@
     {
       "id": "vc-yahoo-shopping-camera",
       "network": "valuecommerce",
-      "type": "mylink",
+      "type": "linkswitch",
       "category": [
         "camera",
         "outdoor",
@@ -150,7 +150,7 @@
     {
       "id": "vc-yahoo-shopping-smart-lock",
       "network": "valuecommerce",
-      "type": "mylink",
+      "type": "linkswitch",
       "category": [
         "smart-lock",
         "door",
@@ -166,7 +166,7 @@
     {
       "id": "vc-yahoo-shopping-sensor-light",
       "network": "valuecommerce",
-      "type": "mylink",
+      "type": "linkswitch",
       "category": [
         "sensor-light",
         "outdoor",
@@ -182,7 +182,7 @@
     {
       "id": "vc-yahoo-shopping-window-lock",
       "network": "valuecommerce",
-      "type": "mylink",
+      "type": "linkswitch",
       "category": [
         "door",
         "rental"
@@ -196,7 +196,7 @@
     {
       "id": "vc-yahoo-shopping-alarm",
       "network": "valuecommerce",
-      "type": "mylink",
+      "type": "linkswitch",
       "category": [
         "alarm",
         "rental",
