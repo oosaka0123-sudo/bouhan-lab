@@ -40,3 +40,43 @@ const keywordMap={
 'door':['玄関','ドア'],'outdoor':['屋外','ベランダ','駐車場'],'alarm':['防犯ブザー','防犯アラーム','ブザー']};
 export function inferPageContext(){const src=`${location.pathname} ${document.title} ${(document.querySelector('main')?.innerText||'').slice(0,6000)}`;const tags=[];Object.entries(keywordMap).forEach(([tag,words])=>{if(words.some(w=>src.includes(w)))tags.push(tag)});return [...new Set(tags)]}
 export async function mountAffiliateSlots(){const slots=[...document.querySelectorAll('[data-affiliate-slot]')];if(!slots.length)return;try{const res=await fetch('data/ads.json',{cache:'no-store'});if(!res.ok)throw new Error(`ad registry ${res.status}`);const base=await res.json();let runtime={ads:[]};try{const rr=await fetch('data/ads.runtime.json',{cache:'no-store'});if(rr.ok)runtime=await rr.json()}catch{}const map=new Map((base.ads||[]).map(ad=>[ad.id,ad]));(runtime.ads||[]).forEach(ad=>map.set(ad.id,{...(map.get(ad.id)||{}),...ad}));const router=new AdRouter({ads:[...map.values()]});const inferred=inferPageContext();const rendered=[];slots.forEach(slot=>{const explicit=(slot.dataset.context||'').split(',').map(v=>v.trim()).filter(Boolean);const ad=router.render(slot,[...new Set([...explicit,...inferred])]);if(ad)rendered.push({slot,ad})});const linkSwitchSlots=rendered.filter(({ad})=>ad.network==='valuecommerce'&&ad.type==='linkswitch');if(linkSwitchSlots.length){const ok=await loadValueCommerceLinkSwitch();if(!ok){console.warn('[affiliate] LinkSwitch runtime unavailable');linkSwitchSlots.forEach(({slot})=>{slot.innerHTML='';slot.hidden=true})}}}catch(e){console.warn('[affiliate] registry unavailable',e);slots.forEach(s=>s.hidden=true)}}
+
+
+const amazonProductMap={
+  '/tapo-c530ws.html':'B0DMV8ZR4V',
+  '/tapo-c425.html':'B0CQ233LB8',
+  '/tapo-c520ws.html':'B0CCV51F5R'
+};
+
+export async function mountAmazonAssociateCta(){
+  const asin=amazonProductMap[location.pathname];
+  if(!asin)return false;
+  const box=document.querySelector('.buy-box');
+  if(!box)return false;
+  try{
+    const res=await fetch('data/amazon.runtime.json',{cache:'no-store'});
+    if(!res.ok)return false;
+    const cfg=await res.json();
+    const tag=String(cfg?.tag||'').trim();
+    if(!/^[A-Za-z0-9_-]+-22$/.test(tag))return false;
+    if(box.querySelector('.amazon-btn'))return true;
+    const yahoo=box.querySelector('.yahoo-btn');
+    const actions=document.createElement('div');
+    actions.className='buy-actions';
+    if(yahoo){
+      yahoo.parentNode.insertBefore(actions,yahoo);
+      actions.appendChild(yahoo);
+    }else{
+      box.appendChild(actions);
+    }
+    const a=document.createElement('a');
+    a.className='amazon-btn';
+    a.href='https://www.amazon.co.jp/dp/'+asin+'/ref=nosim?tag='+encodeURIComponent(tag);
+    a.target='_blank';
+    a.rel='sponsored nofollow noopener';
+    const model=(document.querySelector('h1')?.textContent||'商品').trim();
+    a.textContent='Amazonで'+model+'を見る';
+    actions.appendChild(a);
+    return true;
+  }catch{return false}
+}

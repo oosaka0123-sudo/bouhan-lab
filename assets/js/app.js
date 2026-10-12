@@ -107,8 +107,9 @@ if(shell){
   });
 }
 
-import('./ad-router.js?v=20261011-product').then(async m=>{
+import('./ad-router.js?v=20261012-amazon').then(async m=>{
   m.mountAffiliateSlots();
+  await m.mountAmazonAssociateCta?.();
   if(document.querySelector('[data-linkswitch-page]')){
     const ok=await m.loadValueCommerceLinkSwitch();
     if(!ok){

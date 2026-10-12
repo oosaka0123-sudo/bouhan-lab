@@ -58,3 +58,8 @@
   .product-hero-grid .product-visual img{height:auto;max-height:320px}
   .page-main[data-linkswitch-page]>.content-wrap{padding-top:20px}
 }
+
+.buy-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.amazon-btn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:12px 18px;border-radius:14px;background:#ff9900;color:#111;font-weight:900;text-decoration:none}
+.amazon-btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(0,0,0,.12)}
+@media(max-width:760px){.buy-actions{grid-template-columns:1fr}.amazon-btn{width:100%}}
