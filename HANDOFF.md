@@ -1,6 +1,6 @@
 # HANDOFF.md — 防犯ラボ 完全版引き継ぎ
 
-更新日: 2026-10-12 JST
+更新日: 2026-10-14 JST
 
 このファイルは、防犯ラボの次セッション開始用の引き継ぎです。
 現在状態の正本は GitHub の current code / PR / Actions / Commit です。
@@ -120,60 +120,46 @@ Deploy bridge側:
 
 ## 5. Amazonアソシエイト
 
-ユーザーはAmazonアソシエイトへ登録済み。
+Amazonアソシエイト導線は一部本番実装済み。
 
-現在の方針:
-- 将来的に商品詳細ページへAmazon購入CTAを追加可能
-- Amazon用リンクはAmazonアソシエイトの正規トラッキング付きリンクを使う
-- Amazonの商品画像 / 価格等を無断固定コピーしない
-- Product Advertising APIは今すぐ前提にしない
-- まず通常のAmazonアソシエイトリンク運用を確認する
+現在の実装:
+- Amazon Associates tagは公開Repositoryへ直書きしない
+- Deploy bridgeのGitHub Actions Secretから `data/amazon.runtime.json` を生成
+- 商品ページのJavaScriptがruntimeを読み、ASINからAmazon購入CTAを生成
+- Yahoo!ショッピング導線は既存ValueCommerce LinkSwitch構成を維持
+- Amazon CTA実装済み: Tapo C530WS / Tapo C425 / Tapo C520WS
+- C500 / Kashimura KJ-200 は同一商品のASINを一次確認できるまで未追加
 
-### PC03 / Chromeの重要事項
+直近Evidence:
+- bouhan-lab PR #10 merged
+- deploy bridge PR #29 merged
+- Amazon runtime generation: SUCCESS
+- production deploy / Verify production: SUCCESS
+- 最新Pages build: SUCCESS
+- Open PR / Open Issue: なし（2026-10-14確認）
 
-ユーザー申告:
-- PC03の普段使いChromeではAmazonアソシエイトにログイン済み
-- 「普段使いのChrome用ですすめて」と指定あり
+注意:
+- Amazonの商品URL / ASINを推測で追加しない
+- C500はAmazon.co.jpで販売されていること自体は外部比較サイトで確認できるが、ASINはAmazon画面で直接確認してから追加する
+- KJ-200はAmazon掲載有無の外部情報が一致していないため、Amazon側で直接確認してから判断する
+- Amazon公式画像・価格は無断固定コピーしない
 
-ただし、`ai-master/CONNECT.md` の現在ルールでは:
-- Primary browser automationは専用Chrome profile
-- personal Chrome profileを共有 / CDP公開しない
-- Operaは現行の自動化経路から除外
-- `--autoConnect` は採用しない
-- Chrome DevTools接続はローカル `--browser-url` を使う
-- browser操作は直列化する
+## 6. PC04 / PC03
 
-確認済み専用Chrome:
-- local DevTools: `127.0.0.1:9222`
-- dedicated profileを利用
-- この専用ChromeではAmazonアソシエイトは未ログイン状態だった
+現在のユーザー明示指定では PC04（ks04）を優先する。
 
-次セッションでは、ユーザー希望「普段使いChromeで進める」とMasterの安全ルールを両立できる実行方法を先に確認する。
-個人Chrome profileへ無理にCDP接続しない。
-必要なら:
-- ユーザーが手動でAmazon画面を操作する
-- 専用Chrome側へAmazonログインを移す
-- 安全に利用可能な別の既存接続方式を確認する
+PC04:
+- Remote Desktop Commander接続「いんふぉ０４」
+- 2026-10-14に Online / ping成功を再確認
+- Chrome local DevTools `127.0.0.1:9222` 応答200を確認
+- Amazon / ValueCommerce / A8のブラウザタブ存在を確認
+- Amazonアソシエイトは現在ログイン承認画面まで進んでおり、本人承認待ち
 
-のいずれかを選ぶ。
-
-## 6. PC03
-
-Primary local Windows node:
-`ks-03`
-
-Device ID:
-`b37375fa-4b4d-48eb-a508-d762bb7b9d5e`
-
-ローカルWindows処理が必要な場合はPC03を第一選択とする。
-
-確認済み:
-- Remote Desktop Commander
-- GitHub CLI
-- Claude Code
-- Antigravity CLI
-- Chrome dedicated automation profile
-- GitHub deploy workflow起動
+PC03:
+- Master上のPrimary Local Windows Nodeは引き続き ks-03
+- ユーザーが「04で進めて」と明示した現在TaskではPC04を使う
+- 「03に戻して」でPC03へ戻す
+- 利用上限による自動切替はしない
 
 Operaは現行の既定ブラウザ自動化から除外する。
 
