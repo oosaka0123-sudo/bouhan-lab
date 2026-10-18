@@ -1,36 +1,38 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-11",
+  "updatedAt": "2026-10-18",
   "ads": [
     {
       "id": "vc-secom-home",
       "network": "valuecommerce",
-      "type": "lead",
+      "type": "manual-link",
       "category": [
         "home-security",
         "house",
         "away"
       ],
-      "approved": false,
+      "approved": true,
       "active": false,
       "priority": 100,
-      "label": "セコム・ホームセキュリティ",
-      "url": ""
+      "label": "セコム・ホームセキュリティを確認する",
+      "url": "",
+      "pinnedOnly": true
     },
     {
       "id": "vc-alsok-home",
       "network": "valuecommerce",
-      "type": "lead",
+      "type": "manual-link",
       "category": [
         "home-security",
         "house",
         "away"
       ],
-      "approved": false,
+      "approved": true,
       "active": false,
       "priority": 95,
-      "label": "ALSOKホームセキュリティ",
-      "url": ""
+      "label": "ALSOKホームセキュリティを確認する",
+      "url": "",
+      "pinnedOnly": true
     },
     {
       "id": "rakuten-security-camera",
