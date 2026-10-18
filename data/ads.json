@@ -15,7 +15,8 @@
       "active": false,
       "priority": 100,
       "label": "セコム・ホームセキュリティを確認する",
-      "url": ""
+      "url": "",
+      "pinnedOnly": true
     },
     {
       "id": "vc-alsok-home",
@@ -30,7 +31,8 @@
       "active": false,
       "priority": 95,
       "label": "ALSOKホームセキュリティを確認する",
-      "url": ""
+      "url": "",
+      "pinnedOnly": true
     },
     {
       "id": "rakuten-security-camera",
