@@ -233,3 +233,42 @@ Gemini:
 「ai-master と bouhan-lab/HANDOFF.md を読み、Amazonアソシエイト確認から再開」
 
 で復元できる状態を目指す。
+
+
+## 9. ValueCommerceホームセキュリティ導線（2026-10-18）
+
+防犯ラボのValueCommerceサイトは `防犯ラボ|住まいの防犯対策ガイド` を使用する。
+
+提携確認済み:
+- Yahoo!ショッピング
+- eBEST
+- サンワダイレクト
+- アイリスプラザ
+- ALSOK
+- セコム・ホームセキュリティ
+
+2026-10-18実装:
+- `secom.html` / `alsok.html` / `home-security-compare.html` / `secom-vs-alsok.html` にProvider固定CTAスロットを追加
+- `data-ad-id="vc-secom-home"` / `data-ad-id="vc-alsok-home"` で広告主を固定
+- Provider固定広告は `pinnedOnly` とし、汎用広告枠から誤選択されない
+- URL未設定時はCTAを非表示のfail-closed
+- PR表記あり
+- 直接広告URLは公開Repositoryへ保存せず、Deploy bridgeのSecretsから `data/ads.runtime.json` へ注入
+- Secrets: `VC_SECOM_HOME_URL` / `VC_ALSOK_HOME_URL`
+- Secret未設定時も `{"ads":[]}` を毎回本番へ上書きし、古いruntime URLを残さない
+- Runtime URLはHTTPS必須。SECOM/ALSOKの広告主ドメイン一致をdeploy時とproduction verify時の双方で検証
+
+Evidence:
+- bouhan-lab PR #12 merged: `17b90d37cc3127d6fe1e04a832c02fc5ee17ad95`
+- deploy bridge PR #30 merged: `413424e0200f3805833251addacdf6abda1d6a60`
+- stale-runtime fix PR #31 merged: `cccec14cb2ca1314642b160758acfefa4fa10887`
+- disclosure verify fix PR #32 merged: `a1ea8a710787ca6d09572d34cfc880dcd751a2ce`
+- Deploy Bouhan Lab run #34 / run id `39095023535`: SUCCESS
+- production verify: SUCCESS
+- production `data/ads.runtime.json` currently empty (`ads: []`) until actual SECOM/ALSOK ValueCommerce URLs are securely registered
+
+Pending:
+- ValueCommerceへ再ログイン
+- SECOM / ALSOK の正式なValueCommerce広告URLを取得
+- URLを公開せずGitHub Secretsへ登録
+- 再deploy後、各CTAが正しいProviderへ遷移することをlive verify
